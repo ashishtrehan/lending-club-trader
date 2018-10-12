@@ -1,0 +1,12 @@
+python-dateutil
+sqlalchemy
+nose
+coverage
+datetime
+pytz
+Flask==0.12
+prometheus_client==0.0.19
+uwsgi==2.0.15
+setuptools==27.2.0
+flask-restful==0.3.6
+requests==2.11.1

@@ -2,10 +2,24 @@ version: '2'
 
 services:
 
-  tsp:
+  lending-club-trader:
     image: lending-club-trader:latest
     build: ""
     mem_limit: 100M
     restart: always
     ports:
      - "8081:80"
+
+  db:
+    restart: always
+    image: postgres:9.6
+    command: postgres -c logging_collector=on -c log_statement=all
+    volumes:
+      - ./dev-docker/SQL/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "8432:5432"
+    env_file:
+      - dev-docker/db.env
+
+
+#PGPASSWORD=password psql -h localhost -p 8432 -d db -U read_write_user

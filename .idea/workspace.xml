@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623eb6fa-6e69-47ca-b72f-ba13884d595f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/lending-club-trader.iml" afterPath="$PROJECT_DIR$/.idea/lending-club-trader.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/dev-docker/SQL/init.sql" afterPath="$PROJECT_DIR$/dev-docker/SQL/init.sql" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" afterPath="$PROJECT_DIR$/docker-compose.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/data/loans.csv" afterPath="$PROJECT_DIR$/dev-docker/SQL/loans.csv" />
-      <change beforePath="$PROJECT_DIR$/src/lending-club-trader.py" afterPath="$PROJECT_DIR$/src/lending-club-trader.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lending-club-trader.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lending-club-trader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lending-club-trader.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
@@ -84,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loans_clean.csv" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loans_clean.csv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev-docker/SQL/loans_clean.csv">
           <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="-101">
               <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
             </state>
           </provider>
@@ -596,14 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-docker/SQL/insert_loans_data.psql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -612,18 +596,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev-docker/SQL/loans_clean.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="105">
-          <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lending-club-trader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-docker/SQL/insert_loans_data.psql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-docker/SQL/loans_clean.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-101">
+          <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
         </state>
       </provider>
     </entry>

@@ -1,8 +1,8 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE SCHEMA IF NOT EXISTS lending_club;
 
 CREATE TABLE lending_club.loans (
-id VARCHAR,
-member_id VARCHAR,
+id uuid NOT NULL DEFAULT uuid_generate_v1(),
 loan_amnt VARCHAR,
 funded_amnt VARCHAR,
 funded_amnt_inv VARCHAR,
@@ -148,3 +148,4 @@ settlement_percentage VARCHAR,
 settlement_term VARCHAR,
 PRIMARY KEY (id)
 );
+

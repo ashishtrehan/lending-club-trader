@@ -16,10 +16,11 @@ services:
     command: postgres -c logging_collector=on -c log_statement=all
     volumes:
       - ./dev-docker/SQL/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./dev-docker/SQL/:/docker-entrypoint-initdb.d/
     ports:
       - "8432:5432"
     env_file:
       - dev-docker/db.env
 
 
-#PGPASSWORD=password psql -h localhost -p 8432 -d db -U read_write_user
+#PGPASSWORD=password psql -h localhost -p 8432 -d db -U read_write_user -f insert_loans_data.psql

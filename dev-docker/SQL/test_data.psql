@@ -1,0 +1,1 @@
+\COPY lending_club.loans(id, member_id, loan_amnt, funded_amnt, funded_amnt_inv, term, int_rate, installment, grade, sub_grade, emp_title, emp_length) FROM 'loans_3.csv' WITH CSV HEADER;

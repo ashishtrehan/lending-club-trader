@@ -1,4 +1,5 @@
 import pandas as pd
+import requests
 
 
 df = pd.read_csv('../dev-docker/SQL/loans_2.csv')

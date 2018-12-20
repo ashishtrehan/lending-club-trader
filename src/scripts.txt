@@ -1,0 +1,14 @@
+Instructions:
+
+1. docker-compose build --no-cache
+2. docker-compose up -d
+3. run insert_loans_data.psql
+4. run insert_zipcodes.psql
+5. clean & transform data run update scripts
+
+
+
+Analysis Ideas:
+1. Survival Analysis
+2. Markowitz Portfolio
+

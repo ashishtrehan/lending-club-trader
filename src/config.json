@@ -1,0 +1,8 @@
+{
+  "database": "db",
+  "schema": "lending_club",
+  "user": "read_write_user",
+  "host": "localhost",
+  "port": "8432",
+  "passw": "password"
+}

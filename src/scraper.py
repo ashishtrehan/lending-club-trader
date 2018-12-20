@@ -1,4 +1,6 @@
 import requests
+import re
+import csv
 
 url = 'https://en.wikipedia.org/wiki/List_of_ZIP_code_prefixes'
 # url = 'https://pe.usps.com/Archive/HTML/DMMArchive20050106/print/L002.htm'
@@ -12,14 +14,34 @@ from bs4 import BeautifulSoup
 soup = BeautifulSoup(website_url, "lxml")
 table = soup.findAll('table')
 
+def hasNumbers(input):
+    return any(char.isdigit() for char in input)
+
+def cleaner(string):
+    s = re.sub(r"[-()\"#/@;:<>{}`+=~|.!?,†*]", "", string)
+    return s
+
+def write_to_csv(l):
+    with open("../dev-docker/SQL/output.csv","w") as f:
+        writer = csv.writer(f)
+        writer.writerow(["zipcode","city_state"])
+        for item in l:
+            for a in item:
+                writer.writerow(a)
+
 def build_zips(list):
-    d = [x for x in list if x not in ('000 ','001 ','002 ','003 ','004 ')]
-    cnt = 0
+    d = [x for x in list]
+    zips = []
     for cnt,(v,w) in enumerate(zip(d[:-1],d[1:])):
-        if cnt % 2 == 0:
-            print ([v,w])
+        if hasNumbers(v)==True and hasNumbers(w)==False:
+            d = v.split(' ')
+            zip_unit = d[0]+'xx'
+            state = cleaner(d[1])
+            full = [zip_unit,w+', '+state]
+            zips.append(full)
         else:
             pass
+    return zips
 
 def scraper(url):
     website_url = requests.get(url).text
@@ -28,18 +50,4 @@ def scraper(url):
     a = [build_zips(l) for l in raw]
     return a
 
-#
-# city_state = table.findAll('a')
-#
-# cities = []
-
-# for c in city_state:
-#     print (c.get('title'))
-
-# zips = table.findAll('b')
-
-# for z in zips:
-#     print (z.text)
-
-# print (soup)
-print (scraper(url))
+write_to_csv(scraper(url))

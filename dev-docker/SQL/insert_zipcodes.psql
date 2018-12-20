@@ -1,0 +1,1 @@
+\COPY lending_club.zipcodes(zipcodes,city_state) FROM 'output.csv' WITH CSV HEADER;

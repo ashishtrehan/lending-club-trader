@@ -149,3 +149,12 @@ settlement_term VARCHAR,
 PRIMARY KEY (id)
 );
 
+
+CREATE TABLE lending_club.zipcodes (
+id uuid NOT NULL DEFAULT uuid_generate_v1(),
+zipcodes VARCHAR,
+city_state VARCHAR,
+PRIMARY KEY (id)
+);
+
+

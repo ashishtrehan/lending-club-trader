@@ -1,17 +1,28 @@
 from sqlalchemy import create_engine
-import json
+from sqlalchemy.orm import scoped_session, sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
+import os
+import parameters
 import pandas as pd
-import psycopg2
 
 
-with open('config.json') as f:
-    conf = json.load(f)
+db_string = "postgresql://{0}:{1}@{2}:{3}/{4}"
 
-conn_str = "host={} dbname={} user={} password={}".format(conf.get('host'), conf.get('database'), conf.get('user'), conf.get('passw'))
-conn = psycopg2.connect(conn_str)
+
+def getClutchDbConfig():
+    return db_string.format(os.environ.get('PGS_USERNAME'),os.environ.get('PGS_PASSWORD'),os.environ.get('PGS_HOST'),os.environ.get('PGS_PORT', 5432),os.environ.get('PGS_DB'))
+
+engine_db = create_engine(getClutchDbConfig(), convert_unicode=True)
+
+def prod_db():
+    db_session = scoped_session(sessionmaker(autocommit=False,
+                                             autoflush=False,
+                                             bind=engine_db))
+    return db_session
+
 #
 #
-# df = pd.read_sql_query('select * from lending_club.loands limit 10',con=engine)
-#
-# print (df)
-print (conn_str)
+df = pd.read_sql_query('select * from lending_club.loans limit 10',con=engine_db)
+# #
+print (df)
+# print (prod_db())

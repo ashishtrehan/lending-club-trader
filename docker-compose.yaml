@@ -14,6 +14,7 @@ services:
     restart: always
     image: postgres:9.6
     command: postgres -c logging_collector=on -c log_statement=all
+    mem_limit: 100M
     volumes:
       - ./dev-docker/SQL/init.sql:/docker-entrypoint-initdb.d/init.sql
       - ./dev-docker/SQL/:/docker-entrypoint-initdb.d/

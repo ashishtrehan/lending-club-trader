@@ -9,6 +9,6 @@ Instructions:
 
 
 Analysis Ideas:
-1. Survival Analysis
+1. Survival Analysis around loan types
 2. Markowitz Portfolio
 

@@ -20,9 +20,3 @@ def prod_db():
                                              bind=engine_db))
     return db_session
 
-#
-#
-df = pd.read_sql_query('select * from lending_club.loans limit 10',con=engine_db)
-# #
-print (df)
-# print (prod_db())

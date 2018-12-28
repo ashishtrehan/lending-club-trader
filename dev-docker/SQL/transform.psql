@@ -1,0 +1,6 @@
+UPDATE lending_club.loans SET last_pymnt_d = to_timestamp(last_pymnt_d,'Mon-YYYY');
+UPDATE lending_club.loans SET next_pymnt_d = to_timestamp(next_pymnt_d,'Mon-YYYY');
+UPDATE lending_club.loans SET issue_d = to_timestamp(issue_d,'Mon-YYYY');
+UPDATE lending_club.loans SET funded_amnt = funded_amnt::numeric;
+UPDATE lending_club.loans SET funded_amnt_inv = funded_amnt_inv::numeric;
+UPDATE lending_club.loans SET last_pymnt_amnt = last_pymnt_amnt::numeric;

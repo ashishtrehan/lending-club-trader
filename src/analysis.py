@@ -14,8 +14,10 @@ class LCTrader(object):
 
         self.employment_length = self.loan_data['emp_length'].value_counts().head()
 
+        self.purpose = self.loan_data['purpose'].value_counts().head()
 
 
 
 
-print (LCTrader().employment_length)
+
+print (LCTrader().purpose)
